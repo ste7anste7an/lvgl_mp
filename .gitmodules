@@ -1,0 +1,6 @@
+[submodule "lvgl_micropython"]
+	path = lvgl_micropython
+	url = https://github.com/lvgl-micropython/lvgl_micropython.git
+[submodule "micropython-ulab"]
+	path = micropython-ulab
+	url = https://github.com/v923z/micropython-ulab.git
