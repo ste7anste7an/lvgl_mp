@@ -4,6 +4,9 @@ rm -rf ../lms-frozen
 mkdir -p ../submodules
 mkdir -p ../lms-frozen
 
+mkdir -p ../lvgl_micropython/micropy_updates/esp32/modules/
+cp inisetup.py ../lvgl_micropython/micropy_updates/esp32/modules
+
 cd ../submodules
 git clone https://github.com/v923z/micropython-ulab.git
 git clone -b frozen-modules-esp32 https://github.com/antonvh/mpy-robot-tools.git
