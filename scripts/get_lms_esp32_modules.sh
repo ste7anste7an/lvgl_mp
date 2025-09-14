@@ -4,12 +4,25 @@ rm -rf ../lms-frozen
 mkdir -p ../submodules
 mkdir -p ../lms-frozen
 
+
+cd ..
+rm -rf lvgl_micropython
+rm -rf micropython-ulab
+git clone https://github.com/lvgl-micropython/lvgl_micropython.git
+git clone https://github.com/v923z/micropython-ulab.git
+
+# copy patched esp32_rmt.c
+mkdir -p lvgl_micropython/micropy_updates/esp32
+cp lvgl_patches/micropy_updates/esp32/esp32_rmt.c lvgl_micropython/micropy_updates/esp32
+
+cd scripts
+
 mkdir -p ../lvgl_micropython/micropy_updates/esp32/modules/
 cp inisetup.py ../lvgl_micropython/micropy_updates/esp32/modules
 
 cd ../submodules
 git clone https://github.com/v923z/micropython-ulab.git
-git clone -b frozen-modules-esp32 https://github.com/antonvh/mpy-robot-tools.git
+git clone https://github.com/antonvh/mpy-robot-tools.git
 git clone https://github.com/antonvh/SerialTalk.git
 git clone https://github.com/antonvh/PUPRemote.git
 git clone https://github.com/antonvh/PyHuskyLens.git
