@@ -1,0 +1,5 @@
+firmware/
+lvgl_micropython/
+micropython-ulab/
+submodules/
+lms-frozen/
